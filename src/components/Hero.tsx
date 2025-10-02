@@ -1,10 +1,12 @@
 import { Wrench, Phone } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
     <section id="hero" className="relative pt-32 pb-20 px-4 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${heroBg})` }} />
+      <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 via-secondary/60 to-primary/70" />
       
       <div className="container mx-auto relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
