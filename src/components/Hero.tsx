@@ -1,15 +1,15 @@
 import { Wrench, Phone } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-
 const Hero = () => {
-  return (
-    <section id="hero" className="relative pt-32 pb-20 px-4 overflow-hidden">
+  return <section id="hero" className="relative pt-32 pb-20 px-4 overflow-hidden">
       {/* Background image with overlay */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${heroBg})` }} />
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroBg})`
+    }} />
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 via-secondary/60 to-primary/70" />
       
       <div className="container mx-auto relative z-10">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl bg-white/[0.18]">
           {/* Icon */}
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-8">
             <Wrench className="w-10 h-10 text-primary" />
@@ -21,39 +21,34 @@ const Hero = () => {
           </h1>
 
           {/* H2 - Company Description */}
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 leading-relaxed">
+          <h2 className="text-xl md:text-2xl mb-8 leading-relaxed text-zinc-950 lg:text-3xl">
             Mais que reforma, uma nova experiência na estrada
           </h2>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+          <p className="text-lg mb-12 max-w-3xl mx-auto text-zinc-950 md:text-xl">
             Desde 2018 oferecendo serviços especializados em funilaria, pintura e manutenção de ônibus, 
             micro-ônibus e caminhões em Canoas
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="https://wa.me/5551997244224"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-all hover:shadow-lg hover:scale-105"
-            >
+            <a href="https://wa.me/5551997244224" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-all hover:shadow-lg hover:scale-105">
               <Phone className="w-5 h-5" />
               Solicitar orçamento
             </a>
             
-            <button
-              onClick={() => {
-                const element = document.getElementById("services");
-                if (element) {
-                  const headerOffset = 80;
-                  const elementPosition = element.getBoundingClientRect().top;
-                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                  window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-                }
-              }}
-              className="inline-flex items-center gap-2 bg-secondary/10 text-secondary border-2 border-secondary/30 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary hover:text-secondary-foreground transition-all hover:border-secondary"
-            >
+            <button onClick={() => {
+            const element = document.getElementById("services");
+            if (element) {
+              const headerOffset = 80;
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+              });
+            }
+          }} className="inline-flex items-center gap-2 bg-secondary/10 text-secondary border-2 border-secondary/30 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary hover:text-secondary-foreground transition-all hover:border-secondary">
               Nossos serviços
             </button>
           </div>
@@ -75,8 +70,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
