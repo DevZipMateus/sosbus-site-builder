@@ -12,7 +12,9 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             {/* Company Info */}
             <div>
-              <img src={logo} alt="Logo SosBus" className="h-16 w-auto mb-4" />
+              <div className="inline-flex items-center justify-center bg-background rounded-full p-4 mb-4">
+                <img src={logo} alt="Logo SosBus" className="h-16 w-auto" />
+              </div>
               <p className="text-secondary-foreground/80 mb-4">
                 Desde 2018 oferecendo serviços especializados em funilaria, pintura e manutenção 
                 de ônibus e caminhões em Canoas.
