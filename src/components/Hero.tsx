@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="container mx-auto relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl bg-black/[0.57]">
           {/* Logo */}
-          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-background p-4 mb-8">
+          <div className="inline-flex items-center justify-center w-36 h-36 rounded-full bg-background p-5 mb-8">
             <img src={logo} alt="Logo SosBus" className="w-full h-full object-contain" />
           </div>
 
