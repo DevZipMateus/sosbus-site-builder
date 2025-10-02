@@ -5,17 +5,17 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary text-secondary-foreground pt-16 pb-8">
+    <footer className="bg-secondary text-secondary-foreground pt-12 sm:pt-16 pb-6 sm:pb-8">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Main Footer Content */}
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
             {/* Company Info */}
             <div>
-              <div className="inline-flex items-center justify-center bg-background rounded-full p-4 mb-4">
-                <img src={logo} alt="Logo SosBus" className="h-16 w-auto" />
+              <div className="inline-flex items-center justify-center bg-background rounded-full p-3 sm:p-4 mb-4">
+                <img src={logo} alt="Logo SosBus" className="h-12 sm:h-16 w-auto" />
               </div>
-              <p className="text-secondary-foreground/80 mb-4">
+              <p className="text-sm sm:text-base text-secondary-foreground/80 mb-4">
                 Desde 2018 oferecendo serviços especializados em funilaria, pintura e manutenção 
                 de ônibus e caminhões em Canoas.
               </p>
@@ -43,8 +43,8 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Links rápidos</h3>
-              <ul className="space-y-3">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Links rápidos</h3>
+              <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base">
                 <li>
                   <button
                     onClick={() => {
@@ -94,8 +94,8 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">Contato</h3>
-              <ul className="space-y-3">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Contato</h3>
+              <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base">
                 <li className="flex items-start gap-2 text-secondary-foreground/80">
                   <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
                   <span>Rua Argentina, 132<br />Bairro São José – Canoas/RS</span>

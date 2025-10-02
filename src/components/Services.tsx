@@ -33,40 +33,40 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 px-4 bg-background">
+    <section id="services" className="py-12 sm:py-16 md:py-20 px-4 bg-background">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
               Nossos serviços
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto mb-6" />
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <div className="w-20 sm:w-24 h-1 bg-primary mx-auto mb-4 sm:mb-6" />
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Soluções completas em reforma e estética automotiva
             </p>
           </div>
 
           {/* Services Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid sm:grid-cols-2 gap-6 md:gap-8 mb-10 md:mb-12">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl transition-all hover:border-primary/50 animate-fade-in"
+                className="group bg-card border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all hover:border-primary/50 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
@@ -84,11 +84,11 @@ const Services = () => {
           </div>
 
           {/* Additional Services */}
-          <div className="bg-muted/50 border border-border rounded-2xl p-8 animate-fade-in">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
+          <div className="bg-muted/50 border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 animate-fade-in">
+            <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
               Serviços adicionais
             </h3>
-            <div className="grid md:grid-cols-2 gap-4 text-muted-foreground">
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 text-sm sm:text-base text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                 Manutenção elétrica

@@ -2,25 +2,25 @@ import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-muted/30 to-background">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-b from-muted/30 to-background">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
               Entre em contato
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto mb-6" />
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <div className="w-20 sm:w-24 h-1 bg-primary mx-auto mb-4 sm:mb-6" />
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Estamos prontos para atender você e transformar seu veículo
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Information */}
-            <div className="space-y-8 animate-fade-in">
+            <div className="space-y-6 sm:space-y-8 animate-fade-in">
               <div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
                   Informações de contato
                 </h3>
                 
@@ -119,12 +119,12 @@ const Contact = () => {
 
             {/* Map */}
             <div className="animate-scale-in">
-              <div className="bg-card border border-border rounded-2xl p-2 shadow-lg h-full min-h-[500px]">
+              <div className="bg-card border border-border rounded-xl sm:rounded-2xl p-2 shadow-lg h-full min-h-[300px] sm:min-h-[400px] md:min-h-[500px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.123456789!2d-51.183333!3d-29.916667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDU1JzAwLjAiUyA1McKwMTEnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
                   width="100%"
                   height="100%"
-                  style={{ border: 0, borderRadius: "1rem", minHeight: "480px" }}
+                  style={{ border: 0, borderRadius: "1rem", minHeight: "280px" }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
