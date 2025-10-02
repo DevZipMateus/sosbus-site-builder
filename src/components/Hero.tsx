@@ -16,16 +16,16 @@ const Hero = () => {
           </div>
 
           {/* H1 - Company Name */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-zinc-50 lg:text-7xl">
             SosBus Reformadora de Veículos
           </h1>
 
           {/* H2 - Company Description */}
-          <h2 className="text-xl md:text-2xl mb-8 leading-relaxed text-zinc-950 lg:text-3xl">
+          <h2 className="text-xl md:text-2xl mb-8 leading-relaxed text-gray-50 lg:text-3xl">
             Mais que reforma, uma nova experiência na estrada
           </h2>
 
-          <p className="text-lg mb-12 max-w-3xl mx-auto text-zinc-950 md:text-xl">
+          <p className="text-lg mb-12 max-w-3xl mx-auto md:text-xl text-zinc-50">
             Desde 2018 oferecendo serviços especializados em funilaria, pintura e manutenção de ônibus, 
             micro-ônibus e caminhões em Canoas
           </p>
