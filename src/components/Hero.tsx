@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 via-secondary/60 to-primary/70" />
       
       <div className="container mx-auto relative z-10">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl">
           {/* Icon */}
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-8">
             <Wrench className="w-10 h-10 text-primary" />
