@@ -48,7 +48,7 @@ const Hero = () => {
                 behavior: "smooth"
               });
             }
-          }} className="inline-flex items-center gap-2 bg-secondary/10 text-secondary border-2 border-secondary/30 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary hover:text-secondary-foreground transition-all hover:border-secondary">
+          }} className="inline-flex items-center gap-2 text-secondary border-2 border-secondary/30 px-8 py-4 rounded-lg font-semibold text-lg hover:text-secondary-foreground transition-all hover:border-secondary bg-zinc-50">
               Nossos serviços
             </button>
           </div>
