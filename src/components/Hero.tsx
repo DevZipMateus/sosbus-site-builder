@@ -1,5 +1,6 @@
-import { Wrench, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.png";
 const Hero = () => {
   return <section id="hero" className="relative pt-32 pb-20 px-4 overflow-hidden">
       {/* Background image with overlay */}
@@ -10,9 +11,9 @@ const Hero = () => {
       
       <div className="container mx-auto relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl bg-black/[0.57]">
-          {/* Icon */}
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-8">
-            <Wrench className="w-10 h-10 text-primary" />
+          {/* Logo */}
+          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-background p-4 mb-8">
+            <img src={logo} alt="Logo SosBus" className="w-full h-full object-contain" />
           </div>
 
           {/* H1 - Company Name */}
