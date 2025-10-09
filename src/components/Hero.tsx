@@ -12,8 +12,8 @@ const Hero = () => {
       <div className="container mx-auto relative z-10 w-full">
         <div className="max-w-4xl mx-auto text-center animate-fade-in backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12 shadow-2xl bg-black/[0.57]">
           {/* Logo */}
-          <div className="inline-flex items-center justify-center w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full bg-background p-4 sm:p-5 md:p-6 mb-6 sm:mb-8">
-            <img src={logo} alt="Logo SosBus" className="w-full h-full object-contain" />
+          <div className="inline-flex items-center justify-center mb-6 sm:mb-8">
+            <img src={logo} alt="Logo SosBus" className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain" />
           </div>
 
           {/* H1 - Company Name */}
