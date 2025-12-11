@@ -1,4 +1,5 @@
 import { CheckCircle2, Users, Award, Clock } from "lucide-react";
+import aboutWorkshop from "@/assets/about-workshop.jpg";
 
 const About = () => {
   const features = [
@@ -32,6 +33,20 @@ const About = () => {
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Tradição e inovação em reformas automotivas
             </p>
+          </div>
+
+          {/* Workshop Image */}
+          <div className="relative rounded-xl sm:rounded-2xl overflow-hidden mb-12 md:mb-16 animate-fade-in">
+            <img 
+              src={aboutWorkshop} 
+              alt="Oficina SosBus"
+              className="w-full h-64 sm:h-80 md:h-96 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-secondary/60 to-transparent" />
+            <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8">
+              <p className="text-primary-foreground text-lg sm:text-xl font-semibold">Nossa estrutura</p>
+              <p className="text-primary-foreground/80 text-sm sm:text-base">Equipamentos modernos para melhor atendê-lo</p>
+            </div>
           </div>
 
           {/* Main Content */}
