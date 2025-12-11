@@ -1,4 +1,8 @@
 import { Paintbrush, Hammer, Sparkles, Sticker } from "lucide-react";
+import serviceBodywork from "@/assets/service-bodywork.jpg";
+import servicePainting from "@/assets/service-painting.jpg";
+import servicePolishing from "@/assets/service-polishing.jpg";
+import serviceWrap from "@/assets/service-wrap.jpg";
 
 const Services = () => {
   const services = [
@@ -8,6 +12,7 @@ const Services = () => {
       description:
         "Reparo completo de lataria em veículos de grande e médio porte, incluindo ônibus, micro-ônibus e caminhões",
       highlights: ["Desamassamento", "Substituição de peças", "Alinhamento estrutural"],
+      image: serviceBodywork,
     },
     {
       icon: Paintbrush,
@@ -15,6 +20,7 @@ const Services = () => {
       description:
         "Pintura completa e retoques profissionais com acabamento de alta qualidade e durabilidade",
       highlights: ["Pintura completa", "Retoques localizados", "Cores personalizadas"],
+      image: servicePainting,
     },
     {
       icon: Sparkles,
@@ -22,6 +28,7 @@ const Services = () => {
       description:
         "Recuperação e proteção da pintura original do veículo com técnicas especializadas",
       highlights: ["Polimento técnico", "Cristalização", "Vitrificação"],
+      image: servicePolishing,
     },
     {
       icon: Sticker,
@@ -29,6 +36,7 @@ const Services = () => {
       description:
         "Aplicação de adesivos e envelopamento para personalização e identificação visual",
       highlights: ["Envelopamento", "Adesivação", "Design personalizado"],
+      image: serviceWrap,
     },
   ];
 
@@ -52,33 +60,43 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-card border border-border rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all hover:border-primary/50 animate-fade-in"
+                className="group bg-card border border-border rounded-xl sm:rounded-2xl overflow-hidden hover:shadow-xl transition-all hover:border-primary/50 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Icon */}
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                {/* Image */}
+                <div className="relative h-48 sm:h-56 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
+                  <div className="absolute bottom-4 left-4 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-primary/90 flex items-center justify-center">
+                    <service.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
+                  </div>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">
-                  {service.title}
-                </h3>
+                <div className="p-6 sm:p-8">
+                  {/* Title */}
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4">
+                    {service.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                  {service.description}
-                </p>
+                  {/* Description */}
+                  <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
 
-                {/* Highlights */}
-                <ul className="space-y-2">
-                  {service.highlights.map((highlight, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      {highlight}
-                    </li>
-                  ))}
-                </ul>
+                  {/* Highlights */}
+                  <ul className="space-y-2">
+                    {service.highlights.map((highlight, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-muted-foreground">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
